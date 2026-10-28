@@ -11,9 +11,9 @@
 
 <p align="center" dir="ltr">
   <a href="https://alion-co.github.io/kahroba/"><img alt="نسخه‌ی وب" src="docs/buttons/web.png" width="336"></a>
-  <a href="https://myket.ir/app/ir.kahroba.alion"><img alt="دریافت از مایکت" src="docs/buttons/myket.png" width="336"></a><br>
+  <a href="https://myket.ir/app/ir.alioninc.kahroba"><img alt="دریافت از مایکت" src="docs/buttons/myket.png" width="336"></a><br>
   <a href="https://github.com/Alion-co/kahroba/releases/latest"><img alt="دانلود مستقیم APK" src="docs/buttons/apk.png" width="336"></a>
-  <a href="https://cafebazaar.ir/app/ir.kahroba.alion"><img alt="دریافت از بازار" src="docs/buttons/bazaar.png" width="336"></a>
+  <a href="https://cafebazaar.ir/app/ir.alioninc.kahroba"><img alt="دریافت از بازار" src="docs/buttons/bazaar.png" width="336"></a>
 </p>
 
 <h2 align="center">امکانات</h2>

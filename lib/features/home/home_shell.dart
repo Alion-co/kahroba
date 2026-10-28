@@ -84,9 +84,18 @@ class _HomeShellState extends State<HomeShell> {
     if (!kIsWeb) {
       _quickActions.initialize(_onShortcut);
       _quickActions.setShortcutItems(const [
-        ShortcutItem(type: 'new_case', localizedTitle: 'پرونده جدید'),
-        ShortcutItem(type: 'search', localizedTitle: 'جستجوی پرونده'),
-        ShortcutItem(type: 'today', localizedTitle: 'تقویم کارها'),
+        ShortcutItem(
+          type: 'new_case', localizedTitle: 'پرونده جدید',
+          icon: 'ic_sc_new',
+        ),
+        ShortcutItem(
+          type: 'search', localizedTitle: 'جستجوی پرونده',
+          icon: 'ic_sc_search',
+        ),
+        ShortcutItem(
+          type: 'today', localizedTitle: 'تقویم کارها',
+          icon: 'ic_sc_calendar',
+        ),
       ]);
     }
   }

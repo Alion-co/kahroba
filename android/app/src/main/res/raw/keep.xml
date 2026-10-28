@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- آیکن‌های میانبر فقط با اسم از Dart صدا زده می‌شوند؛ نباید در ساخت release حذف شوند -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_sc_*" />

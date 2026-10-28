@@ -123,10 +123,25 @@ class AboutPage extends StatelessWidget {
                     content,
                     if (!kIsWeb) ...[
                       const SizedBox(height: AppSpacing.lg),
-                      OutlinedButton.icon(
-                        onPressed: RatePrompt.openMyket,
-                        icon: const Icon(Icons.star_outline_rounded, size: 18),
-                        label: const Text('امتیاز به کهربا در مایکت'),
+                      // امتیاز در مایکت و بازار، کنار هم (در صفحه‌ی باریک زیر هم)
+                      Wrap(
+                        alignment: WrapAlignment.center,
+                        spacing: AppSpacing.sm,
+                        runSpacing: AppSpacing.sm,
+                        children: [
+                          OutlinedButton.icon(
+                            onPressed: RatePrompt.openMyket,
+                            icon: const Icon(Icons.star_outline_rounded,
+                                size: 18),
+                            label: const Text('امتیاز در مایکت'),
+                          ),
+                          OutlinedButton.icon(
+                            onPressed: RatePrompt.openBazaar,
+                            icon: const Icon(Icons.star_outline_rounded,
+                                size: 18),
+                            label: const Text('امتیاز در بازار'),
+                          ),
+                        ],
                       ),
                     ],
                     // سازنده کمی بالاتر از وسط فضای خالی پایین

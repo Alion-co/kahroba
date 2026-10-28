@@ -12,7 +12,7 @@ import '../../data/defaults.dart';
 /// «بعداً» آن را [laterDays] روز عقب می‌اندازد؛ «امتیاز می‌دهم» و «نه، ممنون»
 /// برای همیشه خاموشش می‌کنند. در هر اجرای برنامه حداکثر یک بار.
 abstract final class RatePrompt {
-  static const packageId = 'ir.kahroba.alion';
+  static const packageId = 'ir.alioninc.kahroba';
   static const minDays = 5;
   static const minCases = 5;
   static const laterDays = 7;
@@ -31,6 +31,23 @@ abstract final class RatePrompt {
     try {
       await launchUrl(
         Uri.parse('https://myket.ir/app/$packageId'),
+        mode: LaunchMode.externalApplication,
+      );
+    } catch (_) {}
+  }
+
+  /// صفحه‌ی کهربا در کافه‌بازار برای امتیاز و نظر (اگر بازار نصب نبود، سایت)
+  static Future<void> openBazaar() async {
+    try {
+      final ok = await launchUrl(
+        Uri.parse('bazaar://details?id=$packageId'),
+        mode: LaunchMode.externalApplication,
+      );
+      if (ok) return;
+    } catch (_) {}
+    try {
+      await launchUrl(
+        Uri.parse('https://cafebazaar.ir/app/$packageId'),
         mode: LaunchMode.externalApplication,
       );
     } catch (_) {}
