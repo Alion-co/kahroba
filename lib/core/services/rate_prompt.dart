@@ -36,20 +36,21 @@ abstract final class RatePrompt {
     } catch (_) {}
   }
 
-  /// صفحه‌ی کهربا در کافه‌بازار برای امتیاز و نظر (اگر بازار نصب نبود، سایت)
+  /// صفحه‌ی کهربا در کافه‌بازار برای امتیاز و نظر.
+  /// از لینک bazaar:// استفاده نمی‌شود چون مایکت هم آن را می‌گیرد و
+  /// به‌جای بازار باز می‌شود. لینک سایت بازار اگر اپ بازار نصب باشد در خود
+  /// بازار باز می‌شود، وگرنه در مرورگر.
   static Future<void> openBazaar() async {
+    final url = Uri.parse('https://cafebazaar.ir/app/$packageId');
     try {
       final ok = await launchUrl(
-        Uri.parse('bazaar://details?id=$packageId'),
-        mode: LaunchMode.externalApplication,
+        url,
+        mode: LaunchMode.externalNonBrowserApplication,
       );
       if (ok) return;
     } catch (_) {}
     try {
-      await launchUrl(
-        Uri.parse('https://cafebazaar.ir/app/$packageId'),
-        mode: LaunchMode.externalApplication,
-      );
+      await launchUrl(url, mode: LaunchMode.externalApplication);
     } catch (_) {}
   }
 
