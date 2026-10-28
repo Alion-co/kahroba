@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- پیش از اجرای فلاتر فقط زمینه‌ی تیره‌ی ساده؛ لوگو را صفحه‌ی آغاز خود برنامه نشان می‌دهد
+     تا دو صفحه‌ی آغاز پشت سر هم دیده نشود. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/faz_splash_bg" />
+</layer-list>

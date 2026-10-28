@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- تم پنجره هنگام باز شدن برنامه: صفحه‌ی آغاز تیره‌ی فاز -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- تم پنجره پشت فلاتر؛ تیره تا هنگام گذر از صفحه‌ی آغاز سفید چشمک نزند -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/faz_splash_bg</item>
+    </style>
+</resources>

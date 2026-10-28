@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- رنگ صفحه‌ی آغاز در حالت روشن گوشی: عاجی شامپاینی (همان صفحه‌ی آغاز داخل برنامه) -->
+    <color name="faz_splash_bg">#F6EFE4</color>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- رنگ صفحه‌ی آغاز در حالت تیره‌ی گوشی -->
+    <color name="faz_splash_bg">#0A0A0C</color>
+</resources>

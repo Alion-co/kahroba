@@ -1,0 +1,61 @@
+Kahroba Source-Available License 1.0
+
+Copyright (c) 2026 Alion. All rights reserved.
+
+This license covers the source code, design, graphics and other files in
+this repository ("the Software"), except the third-party parts listed under
+"Third-party material" below.
+
+1. Using the app
+   Anyone may download, install and use the Kahroba app, free of charge,
+   for any purpose, including in their own repair business. Users may also
+   share unmodified copies of the official app, free of charge, provided
+   this license is included.
+
+2. Reading the code
+   You may read and study the source code, and build and run it on your
+   own devices for personal learning and testing.
+
+3. Contributions
+   You may fork this repository on GitHub only to prepare changes
+   ("contributions") that you submit back to this repository. By submitting
+   a contribution, you agree that Alion may use, modify, relicense and
+   distribute it as part of the Software under any terms.
+
+4. What is not permitted
+   Without prior written permission from Alion, you may not:
+   a) copy, reuse or adapt the source code, or any substantial part of it,
+      in any other software, product or service;
+   b) publish, distribute or offer a modified version of the Software, or
+      any app built from this code, under any name;
+   c) sell, rent, sublicense or otherwise commercialize the Software or any
+      part of it, including charging for copies, installation, hosting or
+      access;
+   d) remove or change the name "Kahroba", the logo, or the author credit.
+
+5. No warranty
+   The Software is provided "as is", without warranty of any kind. In no
+   event shall the author be liable for any claim, damages or other
+   liability arising from the use of the Software, including loss of data.
+
+6. Third-party material
+   - Vazirmatn font by Saber Rastikerdar: SIL Open Font License 1.1
+     (assets/fonts/OFL.txt).
+   - Technical knowledge base content (assets/kb/): Creative Commons
+     Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0).
+   - Flutter and the packages listed in pubspec.yaml remain under their
+     own licenses.
+
+For permission requests, contact the author through the links in the app's
+"About Kahroba" page.
+
+----------------------------------------------------------------------------
+
+خلاصه‌ی فارسی (متن انگلیسی بالا ملاک است)
+
+- استفاده از برنامه‌ی کهربا برای همه آزاد و رایگان است؛ حتی در مغازه و
+  کسب‌وکار خودتان.
+- کد را می‌توانید بخوانید و برای یادگیری روی دستگاه خودتان اجرا کنید.
+- برداشتن کد یا بخشی از آن برای برنامه یا محصول دیگر، انتشار نسخه‌ی
+  تغییریافته، و فروش یا هر نوع تجاری‌سازی بدون اجازه‌ی کتبی Alion ممنوع است.
+- پیشنهاد تغییر (Pull Request) به همین مخزن آزاد است.
