@@ -7,8 +7,13 @@
 
 ## دریافت
 
-- **اندروید:** از مایکت، یا فایل APK در بخش [Releases](https://github.com/Alion-co/kahroba/releases)
-- **نسخه‌ی وب:** [alion-co.github.io/kahroba](https://alion-co.github.io/kahroba/)
+<p align="center">
+  <a href="https://myket.ir/app/ir.kahroba.alion"><img alt="دانلود از مایکت" src="https://img.shields.io/badge/Myket-Download-1E88E5?style=for-the-badge&logo=android&logoColor=white" height="40"></a>
+  &nbsp;
+  <a href="https://alion-co.github.io/kahroba/"><img alt="نسخه‌ی وب" src="https://img.shields.io/badge/Web-Open%20App-B08550?style=for-the-badge&logo=googlechrome&logoColor=white" height="40"></a>
+  &nbsp;
+  <a href="https://github.com/Alion-co/kahroba/releases/latest"><img alt="دانلود APK" src="https://img.shields.io/badge/APK-Download-24292F?style=for-the-badge&logo=github&logoColor=white" height="40"></a>
+</p>
 
 ## امکانات
 
