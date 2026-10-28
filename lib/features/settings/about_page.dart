@@ -48,7 +48,7 @@ class AboutPage extends StatelessWidget {
         FadeSlideIn(
           index: 2,
           child: Text(
-            'نسخه‌ی $appVersion · رایگان · کاملاً آفلاین',
+            'نسخه‌ی $appVersion · رایگان و متن‌باز · کاملاً آفلاین',
             style: theme.textTheme.labelSmall?.copyWith(color: muted),
           ),
         ),
