@@ -70,16 +70,6 @@
             <action android:name="android.intent.action.VIEW"/>
             <data android:scheme="geo"/>
         </intent>
-        <!-- صفحه‌ی امتیاز کهربا در مایکت -->
-        <intent>
-            <action android:name="android.intent.action.VIEW"/>
-            <data android:scheme="myket"/>
-        </intent>
-        <!-- صفحه‌ی کهربا در کافه‌بازار -->
-        <intent>
-            <action android:name="android.intent.action.VIEW"/>
-            <data android:scheme="bazaar"/>
-        </intent>
         <!-- ایمیل و صفحه‌ی اینستاگرام سازنده -->
         <intent>
             <action android:name="android.intent.action.SENDTO"/>

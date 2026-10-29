@@ -19,29 +19,33 @@ abstract final class RatePrompt {
 
   static bool _askedThisRun = false;
 
-  /// صفحه‌ی ثبت امتیاز و نظر کهربا در مایکت (اگر مایکت نصب نبود، سایت)
-  static Future<void> openMyket() async {
-    try {
-      final ok = await launchUrl(
-        Uri.parse('myket://comment?id=$packageId'),
-        mode: LaunchMode.externalApplication,
-      );
-      if (ok) return;
-    } catch (_) {}
-    try {
-      await launchUrl(
-        Uri.parse('https://myket.ir/app/$packageId'),
-        mode: LaunchMode.externalApplication,
-      );
-    } catch (_) {}
-  }
+  /// فروشگاهی که این نسخه برایش ساخته شده. هنگام ساخت تعیین می‌شود:
+  /// flutter build apk --dart-define=STORE=myket   (یا bazaar)
+  /// بدون آن «github» است و هر دو دکمه دیده می‌شوند.
+  /// فروشگاه‌ها برنامه‌ای را که کاربر را به فروشگاه دیگر بفرستد رد می‌کنند،
+  /// پس نسخه‌ی هر فروشگاه فقط به خودش لینک می‌دهد.
+  static const store = String.fromEnvironment('STORE', defaultValue: 'github');
+  static bool get showMyket => store != 'bazaar';
+  static bool get showBazaar => store != 'myket';
 
-  /// صفحه‌ی کهربا در کافه‌بازار برای امتیاز و نظر.
-  /// از لینک bazaar:// استفاده نمی‌شود چون مایکت هم آن را می‌گیرد و
-  /// به‌جای بازار باز می‌شود. لینک سایت بازار اگر اپ بازار نصب باشد در خود
-  /// بازار باز می‌شود، وگرنه در مرورگر.
-  static Future<void> openBazaar() async {
-    final url = Uri.parse('https://cafebazaar.ir/app/$packageId');
+  /// نام فروشگاه برای متن پنجره‌ی امتیاز
+  static String get storeName => store == 'bazaar' ? 'بازار' : 'مایکت';
+
+  /// صفحه‌ی امتیاز در فروشگاه همین نسخه
+  static Future<void> openStore() =>
+      store == 'bazaar' ? openBazaar() : openMyket();
+
+  /// صفحه‌ی کهربا در مایکت یا بازار برای امتیاز و نظر.
+  /// فقط لینک سایت فروشگاه استفاده می‌شود، نه اینتنت اختصاصی فروشگاه‌ها؛
+  /// فروشگاه‌ها برنامه‌ای را که اینتنت فروشگاه دیگر را صدا بزند رد می‌کنند.
+  /// اگر اپ فروشگاه نصب باشد خودش لینک را باز می‌کند، وگرنه مرورگر.
+  static Future<void> openMyket() =>
+      _openStorePage(Uri.parse('https://myket.ir/app/$packageId'));
+
+  static Future<void> openBazaar() =>
+      _openStorePage(Uri.parse('https://cafebazaar.ir/app/$packageId'));
+
+  static Future<void> _openStorePage(Uri url) async {
     try {
       final ok = await launchUrl(
         url,
@@ -78,8 +82,8 @@ abstract final class RatePrompt {
       builder: (ctx) => AlertDialog(
         icon: const Icon(Icons.star_rounded, size: 40, color: Color(0xFFFFB020)),
         title: const Text('کهربا به کارتان آمده؟'),
-        content: const Text(
-          'اگر از کهربا راضی هستید، با یک امتیاز و نظر در مایکت کمک کنید '
+        content: Text(
+          'اگر از کهربا راضی هستید، با یک امتیاز و نظر در $storeName کمک کنید '
           'تعمیرکارهای بیشتری پیدایش کنند. کهربا رایگان می‌ماند.',
           textAlign: TextAlign.center,
         ),
@@ -104,7 +108,7 @@ abstract final class RatePrompt {
     switch (choice) {
       case 'rate':
         await appDb.setSetting(SettingKeys.rateState, 'done');
-        await openMyket();
+        await openStore();
       case 'never':
         await appDb.setSetting(SettingKeys.rateState, 'never');
       default:

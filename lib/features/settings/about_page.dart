@@ -129,13 +129,15 @@ class AboutPage extends StatelessWidget {
                         spacing: AppSpacing.sm,
                         runSpacing: AppSpacing.sm,
                         children: [
-                          OutlinedButton.icon(
+                          if (RatePrompt.showMyket)
+                            OutlinedButton.icon(
                             onPressed: RatePrompt.openMyket,
                             icon: const Icon(Icons.star_outline_rounded,
                                 size: 18),
                             label: const Text('امتیاز در مایکت'),
                           ),
-                          OutlinedButton.icon(
+                          if (RatePrompt.showBazaar)
+                            OutlinedButton.icon(
                             onPressed: RatePrompt.openBazaar,
                             icon: const Icon(Icons.star_outline_rounded,
                                 size: 18),
